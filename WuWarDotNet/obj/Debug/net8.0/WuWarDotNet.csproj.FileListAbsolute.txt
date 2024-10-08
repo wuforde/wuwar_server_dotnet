@@ -1,0 +1,15 @@
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/obj/Debug/net8.0/WuWarDotNet.GeneratedMSBuildEditorConfig.editorconfig
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/obj/Debug/net8.0/WuWarDotNet.AssemblyInfoInputs.cache
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/obj/Debug/net8.0/WuWarDotNet.AssemblyInfo.cs
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/obj/Debug/net8.0/WuWarDotNet.csproj.CoreCompileInputs.cache
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/obj/Debug/net8.0/WuWarDotNet.sourcelink.json
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/bin/Debug/net8.0/WuWarDotNet
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/bin/Debug/net8.0/WuWarDotNet.deps.json
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/bin/Debug/net8.0/WuWarDotNet.runtimeconfig.json
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/bin/Debug/net8.0/WuWarDotNet.dll
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/bin/Debug/net8.0/WuWarDotNet.pdb
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/obj/Debug/net8.0/WuWarDotNet.dll
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/obj/Debug/net8.0/refint/WuWarDotNet.dll
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/obj/Debug/net8.0/WuWarDotNet.pdb
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/obj/Debug/net8.0/WuWarDotNet.genruntimeconfig.cache
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/obj/Debug/net8.0/ref/WuWarDotNet.dll

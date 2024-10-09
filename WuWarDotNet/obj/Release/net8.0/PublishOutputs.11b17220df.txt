@@ -1,0 +1,5 @@
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/bin/Release/net8.0/publish/WuWarDotNet
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/bin/Release/net8.0/publish/WuWarDotNet.dll
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/bin/Release/net8.0/publish/WuWarDotNet.deps.json
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/bin/Release/net8.0/publish/WuWarDotNet.runtimeconfig.json
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/bin/Release/net8.0/publish/WuWarDotNet.pdb

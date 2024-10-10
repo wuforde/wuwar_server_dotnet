@@ -1,0 +1,6 @@
+docker run --name wuwar -d -p 456:4321 wuwar 4321
+
+#linked wwwroot folder
+docker run --name wuwar -d -p 456:4555 -v /Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarDotNet/wwwroot:/App/wwwroot wuwar 4555
+
+docker exec -it wuwar /bin/bash

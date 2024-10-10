@@ -19,6 +19,7 @@ internal class Program
         app.MapGet("/init", ()=>  new WuDeck().Deal(2));
         app.MapGet("/draw", () => "Draw");
         
-        app.Run();
+
+        app.Run("http://*:" + args[0]);
     }
 }

@@ -1,0 +1,73 @@
+@page "/wuwar"
+@using WuDeckLib
+@rendermode InteractiveServer
+
+<div class="col-12 main">
+    <div >
+        Computer
+        <div>@computerCard</div>
+    </div>
+    <div>
+        <button class="btn btn-primary" @onclick="Draw">Click me</button>
+        <button class="btn btn-primary" style="visibility: @showButton;" @onclick="ReDeal">ReDeal</button>
+    </div>
+    <div>
+        <h3>@winner</h3>
+    </div>
+    <div>
+        Player 1
+        <div>@playerCard</div>
+    </div>
+</div>
+
+@code {
+    WuDeck deck = new WuDeck();
+    List<List<Card>> hands = null;
+
+    string computerCard = "";
+    string playerCard = "";
+    string winner = "";
+    string showButton = "hidden";
+    protected override async Task OnInitializedAsync()
+    {
+        deck.Shuffle();
+        hands = deck.Deal(2);
+    }
+
+    protected void ReDeal()
+    {
+        deck = new WuDeck();
+        deck.Shuffle();
+        hands = deck.Deal(2);
+        showButton = "hidden";
+        playerCard = "";
+        computerCard = "";
+        winner = "";
+    }
+    protected void Draw()
+    {
+        if(hands[0].Count > 0)
+        {
+            Card cpu= hands[0][hands[0].Count - 1];
+            Card player = hands[1][hands[1].Count - 1];
+
+            computerCard = cpu.Name + " " + cpu.Value;
+            playerCard = player.Name + " " + player.Value;
+
+            hands[0].RemoveAt(hands[0].Count - 1);
+            hands[1].RemoveAt(hands[1].Count - 1);
+
+            if(cpu.Value > player.Value)
+                winner = "Computer wins";
+            else 
+                winner = "Player wins";
+            
+
+        }
+        else 
+        {
+            showButton = "visible";
+            winner = "game over";
+        }
+    }
+}    

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WuWarDotNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7dc6b16a34431081b0eebac47d9b52d26ac7609")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5f21a8c0bf32ab7cb319f53bf75e0e5ea6e7d3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WuWarDotNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WuWarDotNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

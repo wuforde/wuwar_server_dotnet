@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "WuDeckLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/WuDeckLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WuDeckLib.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "WuDeckLib/1.0.0": {
+      "type": "project",
+      "path": "../WuDeckLib/WuDeckLib.csproj",
+      "msbuildProject": "../WuDeckLib/WuDeckLib.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "WuDeckLib >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/wuforde/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuDeckLib/WuDeckLib.csproj": {
+              "projectPath": "/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuDeckLib/WuDeckLib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

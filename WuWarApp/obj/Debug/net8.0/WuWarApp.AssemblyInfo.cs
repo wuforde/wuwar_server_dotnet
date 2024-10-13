@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WuWarApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9bb1c8afc1fa312add2993fa8bc4e99d05de662")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5f21a8c0bf32ab7cb319f53bf75e0e5ea6e7d3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WuWarApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WuWarApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

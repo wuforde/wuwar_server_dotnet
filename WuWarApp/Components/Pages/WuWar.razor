@@ -2,32 +2,41 @@
 @using WuDeckLib
 @rendermode InteractiveServer
 
-<div class="col-12 main">
+<div class="col-12 mainGame">
+    <button class="btn btn-primary" @onclick="Draw">Click me</button>
+    <button class="btn btn-primary" style="visibility: @showButton;" @onclick="ReDeal">ReDeal</button>
     <div >
-        Computer
-        <div>@computerCard</div>
+        Computer <span>@cpuScore</span>
     </div>
-    <div>
-        <button class="btn btn-primary" @onclick="Draw">Click me</button>
-        <button class="btn btn-primary" style="visibility: @showButton;" @onclick="ReDeal">ReDeal</button>
+    <div class="col-3 cardOutline">
+        <div class="topOfCard @computerSuitColor">@computerCard.Name</div>
+        <div class="middleOfCard @computerSuitColor">@computerCard.Suite</div>
+        <div class="bottomOfCard @computerSuitColor">@computerCard.Name</div>
     </div>
     <div>
         <h3>@winner</h3>
     </div>
     <div>
-        Player 1
-        <div>@playerCard</div>
+        Player 1 <span>@playerScore</span>
+        <div class="col-3 cardOutline">
+            <div class="topOfCard @playerSuitColor">@playerCard.Name</div>
+            <div class="middleOfCard @playerSuitColor">@playerCard.Suite</div>
+            <div class="bottomOfCard @playerSuitColor">@playerCard.Name</div>
+        </div>
     </div>
 </div>
 
 @code {
     WuDeck deck = new WuDeck();
     List<List<Card>> hands = null;
-
-    string computerCard = "";
-    string playerCard = "";
+    string computerSuitColor = "";
+    string playerSuitColor = "";
     string winner = "";
     string showButton = "hidden";
+    int cpuScore = 0;
+    int playerScore = 0;
+    Card playerCard = new Card();
+    Card computerCard = new Card();
     protected override async Task OnInitializedAsync()
     {
         deck.Shuffle();
@@ -40,28 +49,35 @@
         deck.Shuffle();
         hands = deck.Deal(2);
         showButton = "hidden";
-        playerCard = "";
-        computerCard = "";
+        playerCard = new Card();
+        computerCard = new Card();
         winner = "";
+        cpuScore = 0;
+        playerScore = 0;
     }
     protected void Draw()
     {
         if(hands[0].Count > 0)
         {
-            Card cpu= hands[0][hands[0].Count - 1];
-            Card player = hands[1][hands[1].Count - 1];
-
-            computerCard = cpu.Name + " " + cpu.Value;
-            playerCard = player.Name + " " + player.Value;
+            computerCard = hands[0][hands[0].Count - 1];
+            playerCard = hands[1][hands[1].Count - 1];
 
             hands[0].RemoveAt(hands[0].Count - 1);
             hands[1].RemoveAt(hands[1].Count - 1);
 
-            if(cpu.Value > player.Value)
-                winner = "Computer wins";
+            if(computerCard.Value > playerCard.Value)
+            { 
+                cpuScore += computerCard.Value + playerCard.Value;
+                  winner = "Computer wins";
+            }
             else 
+            {
+                playerScore += computerCard.Value + playerCard.Value;
                 winner = "Player wins";
-            
+            }
+
+            computerSuitColor = GetCardColor(computerCard);
+            playerSuitColor = GetCardColor(playerCard);
 
         }
         else 
@@ -69,5 +85,16 @@
             showButton = "visible";
             winner = "game over";
         }
+    }
+
+    private string GetCardColor(Card c)
+    {
+        string ret = "";
+        if(c.Suite.ToLower().Equals("diamonds") || c.Suite.ToLower().Equals("hearts"))
+                ret = "cardColorRed";
+        else
+            ret = "cardColorBlack";
+
+        return ret;
     }
 }    

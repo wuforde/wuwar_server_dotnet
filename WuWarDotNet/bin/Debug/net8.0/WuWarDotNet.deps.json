@@ -7,14 +7,30 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "WuWarDotNet/1.0.0": {
+        "dependencies": {
+          "WuDeckLib": "1.0.0"
+        },
         "runtime": {
           "WuWarDotNet.dll": {}
+        }
+      },
+      "WuDeckLib/1.0.0": {
+        "runtime": {
+          "WuDeckLib.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "WuWarDotNet/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WuDeckLib/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -52,4 +52,29 @@ h1:focus {
 .mainGame
 {
    align-content: center;
+   width: 100%;
+}
+
+.cardOutline {
+    border: 1px solid #929292
+}
+
+.topOfCard {
+    text-align: right;
+}
+
+.middleOfCard {
+    text-align: center;
+}
+
+.bottomOfCard {
+    text-align: left;
+}
+
+.cardColorRed {
+    color: red;
+}
+
+.cardColorBlack {
+    color: black;
 }

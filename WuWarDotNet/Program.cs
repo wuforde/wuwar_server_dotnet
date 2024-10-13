@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Session;
 using Microsoft.Extensions.DependencyInjection;
-using Wu.WuDeck;
+using WuDeckLib;
 internal class Program
 {
     private static void Main(string[] args)

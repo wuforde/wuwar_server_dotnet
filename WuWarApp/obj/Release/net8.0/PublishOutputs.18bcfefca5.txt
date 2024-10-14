@@ -1,0 +1,9 @@
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarApp/bin/Release/net8.0/publish/WuWarApp
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarApp/bin/Release/net8.0/publish/appsettings.Development.json
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarApp/bin/Release/net8.0/publish/appsettings.json
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarApp/bin/Release/net8.0/publish/WuWarApp.dll
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarApp/bin/Release/net8.0/publish/WuWarApp.deps.json
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarApp/bin/Release/net8.0/publish/WuWarApp.runtimeconfig.json
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarApp/bin/Release/net8.0/publish/WuWarApp.pdb
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarApp/bin/Release/net8.0/publish/WuDeckLib.dll
+/Users/wuforde/Documents/git/wuwar/wuwar_server_dotnet/WuWarApp/bin/Release/net8.0/publish/WuDeckLib.pdb

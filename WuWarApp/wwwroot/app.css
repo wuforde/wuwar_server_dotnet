@@ -56,7 +56,8 @@ h1:focus {
 }
 
 .cardOutline {
-    border: 1px solid #929292
+    border: 1px solid #929292;
+    border-radius: 10px;
 }
 
 .topOfCard {

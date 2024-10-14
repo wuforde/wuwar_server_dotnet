@@ -3,26 +3,31 @@
 @rendermode InteractiveServer
 
 <div class="col-12 mainGame">
-    <button class="btn btn-primary" @onclick="Draw">Click me</button>
+    <button class="btn btn-primary" @onclick="Draw">Draw</button>
     <button class="btn btn-primary" style="visibility: @showButton;" @onclick="ReDeal">ReDeal</button>
+    <br/><br/><br/><br/>
     <div >
         Computer <span>@cpuScore</span>
     </div>
-    <div class="col-3 cardOutline">
+    <br/>
+    <div class="col-1 cardOutline">
         <div class="topOfCard @computerSuitColor">@computerCard.Name</div>
         <div class="middleOfCard @computerSuitColor">@computerCard.Suite</div>
         <div class="bottomOfCard @computerSuitColor">@computerCard.Name</div>
     </div>
+    <br/>
     <div>
         <h3>@winner</h3>
+        <h6>Cards Remaining: @cardsRemaining</h6>
     </div>
+    <br/>
     <div>
         Player 1 <span>@playerScore</span>
-        <div class="col-3 cardOutline">
-            <div class="topOfCard @playerSuitColor">@playerCard.Name</div>
-            <div class="middleOfCard @playerSuitColor">@playerCard.Suite</div>
-            <div class="bottomOfCard @playerSuitColor">@playerCard.Name</div>
-        </div>
+    </div>
+    <div class="col-1 cardOutline">
+        <div class="topOfCard @playerSuitColor">@playerCard.Name</div>
+        <div class="middleOfCard @playerSuitColor">@playerCard.Suite</div>
+        <div class="bottomOfCard @playerSuitColor">@playerCard.Name</div>
     </div>
 </div>
 
@@ -37,6 +42,7 @@
     int playerScore = 0;
     Card playerCard = new Card();
     Card computerCard = new Card();
+    int cardsRemaining = 0;
     protected override async Task OnInitializedAsync()
     {
         deck.Shuffle();
@@ -57,11 +63,12 @@
     }
     protected void Draw()
     {
+        cardsRemaining = hands[0].Count();
         if(hands[0].Count > 0)
         {
             computerCard = hands[0][hands[0].Count - 1];
             playerCard = hands[1][hands[1].Count - 1];
-
+        
             hands[0].RemoveAt(hands[0].Count - 1);
             hands[1].RemoveAt(hands[1].Count - 1);
 

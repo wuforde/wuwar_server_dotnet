@@ -5,8 +5,8 @@ namespace WuDeckLib;
 
 public class WuDeck
 {
-    public readonly string[] Suites = ["Hearts","Spades","Diamonds","Clubs"];
-    public enum SuiteNames {Hearts = 0,Spades,Diamonds,Clubs}
+    public readonly string[] Suits = ["Hearts","Spades","Diamonds","Clubs"];
+    public enum SuitNames {Hearts = 0,Spades,Diamonds,Clubs}
     public readonly string[] Cards = ["2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"];
     public enum CardNames {Two = 0,Three,Four,Five,Six,Seven,Eight,Nine,Ten,Jack,Queen,King,Ace};
     public readonly int[] CardValues = [2,3,4,5,6,7,8,9,10,11,12,13,14];
@@ -23,11 +23,11 @@ public class WuDeck
     {
         for(int j = 0; j < numOfDecks; j++)
         {
-            for(int i = 0; i < this.Suites.Length; i++)
+            for(int i = 0; i < this.Suits.Length; i++)
             {
                 for(int k = 0; k < this.Cards.Length; k++)
                 {
-                    this.Deck.Add(new Card(this.Suites[i],this.CardValues[k],this.Cards[k]));
+                    this.Deck.Add(new Card(this.Suits[i],this.CardValues[k],this.Cards[k]));
                 }
             }
         }
@@ -48,14 +48,29 @@ public class WuDeck
                 }
             }
 
-            hands[i % numOfPlayers].Add(new Card(this.Deck[i].Suite,this.Deck[i].Value, 
-this.Deck[i].Name));
+            hands[i % numOfPlayers].Add(new Card(this.Deck[i].Suite,this.Deck[i].Value,this.Deck[i].Name));
         }
 
         return hands;
     }
 
-    
+    public List<Card> Cut(int cutIndex = 0)
+    {
+        List<Card> retDeck = new List<Card>();
+        
+        if(cutIndex == 0)
+        {
+            Random r = new Random();
+            cutIndex = r.Next(this.Deck.Count - 1);
+        }
+
+        retDeck.AddRange(this.Deck.GetRange(0, cutIndex));
+        retDeck.AddRange(this.Deck.GetRange(cutIndex,this.Deck.Count - 1));
+        this.Deck = retDeck;
+        
+        return retDeck;
+    }    
+
     public List<Card> Shuffle(int numberOfShuffles = 1)
     {
         int cnt = this.Deck.Count -1;

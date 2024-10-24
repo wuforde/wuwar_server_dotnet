@@ -17,9 +17,15 @@ internal class Program
 
         app.MapGet("/test",() => "hello world");
         app.MapGet("/init", ()=>  new WuDeck().Deal(2));
+        app.MapGet("/cut", () => {
+            WuDeck deck = new WuDeck();
+            deck.Shuffle();
+            deck.Cut(5);
+            deck.Shuffle();
+            return deck;
+        });
         app.MapGet("/draw", () => "Draw");
-        
 
-        app.Run("http://*:" + args[0]);
+        app.Run("http://*:" + (args == null ? args[0] : "4949"));
     }
 }

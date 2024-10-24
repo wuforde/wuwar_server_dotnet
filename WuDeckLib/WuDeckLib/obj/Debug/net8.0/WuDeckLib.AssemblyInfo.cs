@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WuDeckLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e93e17b2756d35109dda2fb402ed9e8631a1c438")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c55529a82f6ce51fc5008afe131a4e06012ec69")]
 [assembly: System.Reflection.AssemblyProductAttribute("WuDeckLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WuDeckLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
